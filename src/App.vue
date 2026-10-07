@@ -70,16 +70,21 @@ const nt = new Intl.NumberFormat('zh-TW', { style: 'currency', currency: 'TWD', 
     <section v-if="loading" class="panel status">載入 CSV…</section>
     <section v-else-if="error" class="panel status error">{{ error }}</section>
     <template v-else>
-      <section class="panel chart-panel">
-        <PriceLineChart :rows="shownData" :colors="colors" />
-      </section>
-      <section class="summary-grid" aria-label="最新價格摘要">
-        <article v-for="item in latestRows" :key="item.model" class="summary-card">
-          <span class="dot" :style="{ backgroundColor: item.color }"></span>
-          <p>{{ item.model }}</p>
-          <strong>{{ nt.format(item.latest) }}</strong>
-          <small :class="item.delta > 0 ? 'up' : item.delta < 0 ? 'down' : ''">4-9 月 {{ item.delta > 0 ? '+' : '' }}{{ nt.format(item.delta) }}</small>
-        </article>
+      <section class="dashboard-layout">
+        <section class="panel chart-panel">
+          <PriceLineChart :rows="shownData" :colors="colors" />
+        </section>
+        <aside class="summary-sidebar" aria-label="最新價格摘要">
+          <h2>最新產品價格</h2>
+          <section class="summary-list">
+            <article v-for="item in latestRows" :key="item.model" class="summary-card">
+              <span class="dot" :style="{ backgroundColor: item.color }"></span>
+              <p>{{ item.model }}</p>
+              <strong>{{ nt.format(item.latest) }}</strong>
+              <small :class="item.delta > 0 ? 'up' : item.delta < 0 ? 'down' : ''">4-9 月 {{ item.delta > 0 ? '+' : '' }}{{ nt.format(item.delta) }}</small>
+            </article>
+          </section>
+        </aside>
       </section>
     </template>
 

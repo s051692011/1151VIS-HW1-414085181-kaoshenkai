@@ -1,0 +1,33 @@
+--- a/src/components/PriceLineChart.vue
++++ b/src/components/PriceLineChart.vue
+@@ -1 +1 @@
+-<template><div ref="setHost" class="chart-host"></div></template>
++<template><div :ref="setHost" class="chart-host"></div></template>
+--- a/package.json
++++ b/package.json
+@@ -1,6 +1,6 @@
+ {
+   "name": "414085181-rtx50-tw-d3-dashboard",
+-  "version": "1.0.0",
++  "version": "0.1.1",
+   "private": true,
+   "type": "module",
+   "scripts": {
+--- a/package-lock.json
++++ b/package-lock.json
+@@ -1,10 +1,10 @@
+ {
+   "name": "414085181-rtx50-tw-d3-dashboard",
+-  "version": "1.0.0",
++  "version": "0.1.1",
+   "lockfileVersion": 3,
+   "requires": true,
+   "packages": {
+     "": {
+       "name": "414085181-rtx50-tw-d3-dashboard",
+-      "version": "1.0.0",
++      "version": "0.1.1",
+
+Fix summary: `ref="setHost"` was a string ref and did not invoke the setup
+function. `:ref="setHost"` binds the function ref, so `setHost(element)` now
+creates the D3 SVG and trend lines. Dependencies are unchanged.

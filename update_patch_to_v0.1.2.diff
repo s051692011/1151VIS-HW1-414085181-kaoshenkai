@@ -1,0 +1,39 @@
+--- a/src/App.vue
++++ b/src/App.vue
+@@
+-      <section class="panel chart-panel">…</section>
+-      <section class="summary-grid" aria-label="最新價格摘要">…</section>
++      <section class="dashboard-layout">
++        <section class="panel chart-panel">…</section>
++        <aside class="summary-sidebar" aria-label="最新價格摘要">
++          <h2>最新產品價格</h2>
++          <section class="summary-list">…</section>
++        </aside>
++      </section>
+--- a/src/styles.css
++++ b/src/styles.css
+@@
+-:root { … background: #08111f; }
++:root { … background: #282a2e; }
+-body { … #08111f; }
++body { … #282a2e; }
+-.summary-grid { display: grid; grid-template-columns: repeat(4, 1fr); … }
++ .dashboard-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, 310px); gap: 18px; }
++ .summary-sidebar { background: #d7dade; … }
++ .summary-list { display: flex; flex-direction: column; gap: 9px; }
++ @media (max-width: 980px) { .dashboard-layout { grid-template-columns: 1fr; } .summary-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+--- a/package.json
++++ b/package.json
+@@
+-  "version": "0.1.1",
++  "version": "0.1.2",
+--- a/package-lock.json
++++ b/package-lock.json
+@@
+-  "version": "0.1.1",
++  "version": "0.1.2",
+
+Changed layout to a desktop two-column dashboard: D3 chart on the left and
+eight latest-price cards in a vertical right sidebar. Replaced blue-black UI
+colours with a deep-grey page/chart surface and light-grey price sidebar.
+CSV and D3 price-calculation logic are unchanged.
