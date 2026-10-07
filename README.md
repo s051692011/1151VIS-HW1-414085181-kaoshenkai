@@ -4,7 +4,27 @@
 
 ![圖片說明](https://github.com/s051692011/1151VIS-HW1-414085181-kaoshenkai/blob/main/%E5%B1%95%E7%A4%BA%E5%9C%96_20261007_111644_001.png)
 
-## 本機執行（Windows 11）
+製作流程:
+
+CSV 月中位數資料
+        ↓
+Vue App.vue 載入與篩選
+        ↓
+D3 PriceLineChart.vue 繪製走勢圖
+        ↓
+Vite 編 dist
+        ↓
+       部署
+
+
+| `src/data/rtx50_tw_monthly_median.csv`   | 8 款產品每月中位數資料，部分歷史數據不全 |
+| `src/App.vue`                            | 標題、型號篩選、右側最新價格欄 |
+| `src/components/PriceLineChart.vue`      | D3 座標軸、折線、資料點與 hover 提示 |
+| `src/styles.css`                         | 左右欄排版 |
+| `package.json`                           | 開發、編譯、預覽 |
+| `vite.config.js`                         | Vite 設定；使用相對路徑 |
+
+
 
 ### 
 ```powershell
@@ -39,14 +59,13 @@ vite.config.js                    base: './'，支援 GitHub Pages 相對路徑
 ```
 ## CSV 
 
-| 欄位 | 用途 |
-|---|---|
-| `month` | `YYYY-MM`，一個月一筆 |
-| `model` | 型號名稱；必須與現有 8 款名稱一致 |
-| `median_ntd` | 當月中位數，整數 NTD |
-| `sample_count` | 本月實際納入中位數的可購買樣本數 |
-| `source_set` | 本月使用的通路集合，以 `|` 分隔 |
-| `notes` | 異常、促銷排除等備註 |
+| `month`         | `YYYY-MM`，一個月一筆 |
+| `model`         | 型號名稱；必須與現有 8 款名稱一致 |
+| `median_ntd`    | 當月中位數，整數 NTD |
+| `sample_count`  | 本月實際納入中位數的可購買樣本數 |
+| `source_set`    | 本月使用的通路集合，以 `|` 分隔 |
+| `notes`         | 異常、促銷排除等備註 |
+
 ## 手動更新 CSV
 
 1. 開啟 `src/data/rtx50_tw_monthly_median.csv`。
