@@ -2,6 +2,7 @@
 import { computed, onMounted, ref } from 'vue'
 import * as d3 from 'd3'
 import PriceLineChart from './components/PriceLineChart.vue'
+import ObservableMultiLineChart from './components/ObservableMultiLineChart.vue'
 import csvUrl from './data/rtx50_tw_monthly_median.csv?url'
 
 const allModels = [
@@ -85,6 +86,17 @@ const nt = new Intl.NumberFormat('zh-TW', { style: 'currency', currency: 'TWD', 
             </article>
           </section>
         </aside>
+      </section>
+
+      <section class="panel observable-panel" aria-labelledby="all-models-title">
+        <div class="observable-heading">
+          <div>
+            <p class="section-kicker">D3 MULTI-SERIES VIEW</p>
+            <h2 id="all-models-title">全部 8 款型號價格比較</h2>
+          </div>
+          <p>固定顯示全型號；滑鼠移入可查看同月價格。</p>
+        </div>
+        <ObservableMultiLineChart :rows="data" :models="allModels" :colors="colors" />
       </section>
     </template>
 
