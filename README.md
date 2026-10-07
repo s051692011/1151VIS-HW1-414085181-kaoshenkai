@@ -64,12 +64,14 @@ vite.config.js                    base: './'，支援 GitHub Pages 相對路徑
 ```
 ## CSV 
 
+```
 | `month`         | `YYYY-MM`，一個月一筆 |
 | `model`         | 型號名稱；必須與現有 8 款名稱一致 |
 | `median_ntd`    | 當月中位數，整數 NTD |
 | `sample_count`  | 本月實際納入中位數的可購買樣本數 |
 | `source_set`    | 本月使用的通路集合，以 `|` 分隔 |
 | `notes`         | 異常、促銷排除等備註 |
+```
 
 ## 手動更新 CSV
 
