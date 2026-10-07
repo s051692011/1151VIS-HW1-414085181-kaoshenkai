@@ -22,12 +22,12 @@ Vite 編譯 dist
 ## 主要檔案
 
 ```
-| `src/data/rtx50_tw_monthly_median.csv` | 8 款產品每月中位數資料 |
-| `src/App.vue` | 標題、型號篩選、右側最新價格欄 |
-| `src/components/PriceLineChart.vue` | D3 座標軸、折線、資料點與 hover 提示 |
-| `src/styles.css` | 配色與左右欄排版 |
-| `package.json` | 開發、編譯、預覽指令 |
-| `vite.config.js` | Vite 設定；使用相對路徑 |
+| `src/data/rtx50_tw_monthly_median.csv`  | 8 款產品每月中位數資料 |
+| `src/App.vue`                           | 標題、型號篩選、右側最新價格欄 |
+| `src/components/PriceLineChart.vue`     | D3 座標軸、折線、資料點與 hover 提示 |
+| `src/styles.css`                        | 配色與左右欄排版 |
+| `package.json`                          | 開發、編譯、預覽指令 |
+| `vite.config.js`                        | Vite 設定；使用相對路徑 |
 ```
 
 
