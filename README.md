@@ -1,6 +1,7 @@
 # 414085181 - 台灣 RTX 50 系列價格趨勢
 
 靜態資料視覺化。使用 Vue 3、Vite、D3.js；資料僅讀取專案內的自行彙整月中位數 CSV。
+https://github.com/s051692011/1151VIS-HW1-414085181-kaoshenkai/blob/
 
 ![圖片說明](https://github.com/s051692011/1151VIS-HW1-414085181-kaoshenkai/blob/main/%E5%B1%95%E7%A4%BA%E5%9C%96_20261007_111644_001.png)
 
