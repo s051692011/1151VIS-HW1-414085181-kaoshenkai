@@ -40,7 +40,7 @@ npm -v
 ```powershell
 npm install
 ```
-### 3. 
+### 
 ```powershell
 npm run dev
 ```
