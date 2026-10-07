@@ -56,11 +56,11 @@ npm run preview
 
 ```text
 src/
-  App.vue                         主畫面、篩選、摘要卡、CSV 載入
+  App.vue                         主畫面、篩選、摘要、CSV 載入
   components/PriceLineChart.vue   D3 時間軸折線圖與 tooltip
   data/rtx50_tw_monthly_median.csv
   styles.css
-vite.config.js                    base: './'，支援 GitHub Pages 相對路徑
+vite.config.js                    base: './'
 ```
 ## CSV 
 
