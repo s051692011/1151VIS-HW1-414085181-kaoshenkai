@@ -77,7 +77,7 @@ vite.config.js                    base: './'，支援 GitHub Pages 相對路徑
 
 1. 開啟 `src/data/rtx50_tw_monthly_median.csv`。
 2. 每型號新增一列，例如 `2026-10,RTX 5080,46990,5,PChome|momo|欣亞|原價屋|Yahoo購物中心,各通路同月可下單新品的月中位數`。
-3. 同一個月必須補齊 8 款型號；不要改欄位名稱。
+3. 同一個月必須補齊 8 款型號。
 4. 以 Excel 開啟時請使用 UTF-8 CSV；儲存時維持逗號分隔 UTF-8。
 5. 執行 `npm run dev` 看新月份，然後執行 `npm run build && npm run preview` 驗證成品。
 計算方式、納入/排除規則與來源清單在 [docs/data_method.md](docs/data_method.md)。
